@@ -23,8 +23,11 @@ I've made a significant chunk of progress in this first session, but a lot will 
 ## Session 2
 
 It's time for laying out the PCB! I once attempted to make a PCB watch before, but it ended up being very expensive to order from JLCPCB because it required double sided assembly, so this time I wanted to keep everything but the battery on the front. Here's what I ended up with:
+
 ![3d render](_images/3d.png)
+
 And prepare yourself for autorouter torture!
+
 ![routing](_images/routed.png)
 
-I also changes quite a bit in the schematic; first of all I switched the resistors for the displays to be in series with the common anode rather than for each segment, gaining me valuable board space. I have the SAMD21 at 45 degrees to make it easier to route and also fit on the watch (which ended up being about 35x40mm in this revision)
+I also changed quite a bit in the schematic; first of all I switched the resistors for the displays to be in series with the common anode rather than for each segment, gaining me valuable board space. I have the SAMD21 at 45 degrees to make it easier to route and also fit on the watch (which ended up being about 35x40mm in this revision)

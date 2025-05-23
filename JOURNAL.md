@@ -1,3 +1,10 @@
+---
+title: "CFWatch"
+author: "Daniel Benge (@Dragon863 on Slack)"
+description: "It's a watch! But custom! Wow! (what does the CF stand for? I completely forgot, I made the title before going to sleep...)"
+created_at: "2024-03-20"
+---
+
 # CFWatch Development Journal
 
 ## Session 1

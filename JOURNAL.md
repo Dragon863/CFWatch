@@ -20,6 +20,8 @@ I've created a schematic in this session that I'm fairly certain is a good start
 
 I've made a significant chunk of progress in this first session, but a lot will be changing as I learn more about how to design a project like this!
 
+*(session duration: ~6hrs!)*
+
 ## Session 2
 
 It's time for laying out the PCB! I once attempted to make a PCB watch before, but it ended up being very expensive to order from JLCPCB because it required double sided assembly, so this time I wanted to keep everything but the battery on the front. Here's what I ended up with:
@@ -31,3 +33,15 @@ And prepare yourself for autorouter torture!
 ![routing](_images/routed.png)
 
 I also changed quite a bit in the schematic; first of all I switched the resistors for the displays to be in series with the common anode rather than for each segment, gaining me valuable board space. I have the SAMD21 at 45 degrees to make it easier to route and also fit on the watch (which ended up being about 35x40mm in this revision)
+
+*(session duration: ~4 hrs)*
+
+## Session 3
+
+What's one important thing this watch is missing? Probably a case! I've been putting this off since I'm completely new to CAD, but this is a great time for me to learn. Initially I tried OnShape before quickly learning I did not enjoy using it at all, and switched over to FreeCAD, which when it isn't randomly crashing is an excellent piece of open source software! Getting the hang of constraints wasn't very easy, but once I got my head around it they did make quite a lot of sense. I also exported a `.wrl` of my PCB from KiCad and a STL from FreeCAD to check they fitted together, I've added a render below:
+
+![3d render](_images/render.png)
+
+This was really interesting to play around with, and I learned a ton about CAD in the process! The main issue I faced was with the battery cell - almost every mount for a CR2032 cell (I'll be using a compatible but rechargeable LIR2032) was at least 4.5mm tall, which makes it difficult to design a case without it being super tall.
+
+*(session duration: honestly I split this into a few sections and completely lost track. Maybe 6 hours total?)*

@@ -52,3 +52,26 @@ What's one important thing this watch is missing? Probably a case! I've been put
 This was really interesting to play around with, and I learned a ton about CAD in the process! The main issue I faced was with the battery cell - almost every mount for a CR2032 cell (I'll be using a compatible but rechargeable LIR2032) was at least 4.5mm tall, which makes it difficult to design a case without it being super tall.
 
 *(session duration: honestly I split this into a few sections and completely lost track. Maybe 6 hours total?)*
+
+## Session 4
+
+This session was mostly focussed on cleaning up the watch and readying it for production. I did this in about 3 sessions in reality, but since they were all pretty similar I'll write it up in one. Enough preamble, let's get into it!
+The first thing I did was to get some sensible footprints assigned. Turns out, using 0603 for everything was a stupid decision - especially for diodes. I did have to use small footprints for nearly everything, since 4x4cm is pretty tiny in the grand scheme of things
+Next was routing vias... turns out, autorouter sucks, especially with such a tiny board. I routed it all by hand which led to something a bit like this:
+
+![new routed design](_images/newly-routed.png)
+
+The main issues was that the 7 segment displays made it really hard to route anything near them since they hard 10 pins each. I had to increase the board size by a few mm too, just to make enough room for traces near the edges, and I added the JLCPCB order placeholder on the back too. The main reason everything was so difficult to lay out was that to stay under my $150 budget, I had to keep everything on one side of the board to save the $50 fee JLCPCB adds for double sided assembly (which is fair enough really, I can't imagine it's easy to do with a pick and place machine)
+
+With that done, I moved on to the case - since I changed the board shape I needed to update the 3d model. I increased the size a little, and rounded the corners more to make it much more aesthetically pleasing/
+
+Okay, almost done now! I uploaded this draft of the design to JLC to get a rough estimate of the cost, and it came out to about £70 as shown below. Personally I think that's a pretty amazing price when you consider how difficult assembling something like this can be!
+
+![price](_images/price.png)
+
+I also made a blender render of the current state:
+
+![render](_images/newrender.png)
+
+
+*(session duration: roughly 8 hours in total, maybe more)*

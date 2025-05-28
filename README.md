@@ -6,4 +6,4 @@ Current design rendered in blender:
 
 ![render](_images/newrender.png)
 
-For a rough BOM, see session 5 in `JOURNAL.md`
+For a rough BOM, see `BOM.csv`

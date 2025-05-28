@@ -6095,6 +6095,28 @@
 			)
 		)
 	)
+	(global_label "TP_RST"
+		(shape input)
+		(at 171.45 240.03 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2bf11a34-ab80-4839-8bf2-c565979265b6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8125 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "F"
 		(shape input)
 		(at 245.11 128.27 270)
@@ -8817,6 +8839,72 @@
 			(project ""
 				(path "/e5022d08-9dda-4e3a-b81c-bab3a6fb67af"
 					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 171.45 240.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5980f234-db76-4627-a7f4-939d4cdbd4f1")
+		(property "Reference" "TP5"
+			(at 185.674 240.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 176.53 240.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 171.45 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 171.45 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d23d8cb5-ce1d-4b6d-8626-f0c184086b1d")
+		)
+		(instances
+			(project ""
+				(path "/e5022d08-9dda-4e3a-b81c-bab3a6fb67af"
+					(reference "TP5")
 					(unit 1)
 				)
 			)

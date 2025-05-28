@@ -1,3 +1,6 @@
 Watch-backups/
 jlcpcb/
 *.lck
+
+*.lck
+fp-info-cache

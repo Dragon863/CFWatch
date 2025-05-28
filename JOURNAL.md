@@ -1,7 +1,7 @@
 ---
 title: "CFWatch"
 author: "Daniel Benge (@Dragon863 on Slack)"
-description: "It's a watch! But custom! Wow! (what does the CF stand for? I completely forgot, I made the title before going to sleep...)"
+description: "It's a watch! But custom! Wow!"
 created_at: "2025-05-18"
 ---
 
@@ -17,17 +17,24 @@ created_at: "2025-05-18"
 - A LIR2032 rechargeable button cell for the battery seeing as the CR2032 in the same form factor is super popular and has a lot of mountings available
 
 Here are some designs that inspired me:
-![Watch 1](_images/watch1.png)
-![Watch 2](_images/watch2.png)
-![Watch 3](_images/watch3.png)
+| ![Watch 1](_images/watch1.png) | ![Watch 2](_images/watch2.png) | ![Watch 3](_images/watch3.png) |
+| :----------------------------: | :----------------------------: | :----------------------------: |
+|        Cool binary display     |     LOVE this LED matrix!!     |  USB and *very* nice displays  |
 
 I've created a schematic in this session that I'm fairly certain is a good starting point, but it is definitely subject to change a lot! I included:
 1. A battery and charging circuit using the *MCP73831-2-OT*
 2. A USB C port with the appropriate resistors for 5V input
 3. A 5V-3.3V step down with the *AP2112K-3.3* (the SAMD21 uses 3.3V)
-4. 4x 7 segment digits with transistors to select which digit is active - hopefully I'll be able to [charlieplex](https://en.wikipedia.org/wiki/Charlieplexing) them!
+4. 4x 7 segment digits with transistors to select which digit is active - these are [charlieplexed](https://en.wikipedia.org/wiki/Charlieplexing) to reduce pins necessary to drive them!
 
-I've made a significant chunk of progress in this first session, but a lot will be changing as I learn more about how to design a project like this!
+I made it by breaking down the design into smaller chunks, with the first challenge being power regulation. 
+- The SAMD21 uses 3.3V power, whereas a LIR2032 cell gives a wide range and USB-C typically deliver 5V as a standard. I solved this by having the USB and cell feed into a step down converter as mentioned above, supplying a steady feed to the MCU
+- The displays themselves are charlieplexed using 4 transistors, each selecting a digit and allowing it to be driven. I'm sure this will be difficult to manage in software, but that's a problem for future me :)
+- I've never really done much with a bare metal microcontroller before, so I did quite a bit of research on how to power them; the datasheet for the one I'm using said to add capacitors on all the power lines, and I used diodes too just as a precaution to prevent anything being fried by reverse polarity
+- Another fun issue is actually keeping the time; to save space I really didn't want to add a whole RTC, which meant I needed the internal clock of the MCU to be as accurate as possible. How did I do that? Adding a crystal! I won't pretend I didn't use a ton of references from other people's projects here, since I have never paid attention to crystals in schematics before so haven't a clue how they should be wired
+KiCad's labels are severely underrated too, this whole schematic looks really clean, but I would never have managed it without them!
+
+I made a significant chunk of progress in this first session, but a lot will be changing as I learn more about how to design a project like this!
 
 *(session duration: ~6hrs!)*
 

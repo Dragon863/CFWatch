@@ -7,6 +7,8 @@ created_at: "2025-05-18"
 
 # CFWatch Development Journal
 
+**Total time spent:** around 25hrs
+
 ## Session 1
 
 **And so it begins!** The goal here is to build a watch I'd genuinely be happy to wear daily, with non-intrusive charging circuitry and decent battery life. I've been loving the posts in [r/cassettefuturism](https://reddit.com/r/cassettefuturism/top/?sort=top&t=all) lately, so something fitting that vibe would just be awesome to build! I'm leaning towards 7 segment displays rather than one of those cheap 0.96" oleds or a round LCD/TFT display, simply because in my opinion they look a lot less cheap and can convey what I need them to easily. I think the main challenges here are going to be durability, making something that doesn't cost a fortune to assemble, and driving displays from a microcontroller. Here are my current ideas:
@@ -75,8 +77,6 @@ I also made a blender render of the current state:
 
 
 *(session duration: roughly 8 hours in total, maybe more)*
-
-~110 for PCB assembly
 
 ## Session 5
 

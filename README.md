@@ -1,7 +1,9 @@
 # CFWatch
 
-This is a WIP project where I'm attempting to make a custom watch with a PCB and case for [highway](https://highway.hackclub.com/)! Please check back later, or read `JOURNAL.md` for the current development log :)
+This is a project where I'm attempting to make a custom watch with a PCB and case for [highway](https://highway.hackclub.com/)! Please read `JOURNAL.md` for the current development log :)
 
-Current draft design:
+Current design rendered in blender:
 
 ![render](_images/newrender.png)
+
+For a rough BOM, see session 5 in `JOURNAL.md`

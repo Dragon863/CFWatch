@@ -75,3 +75,20 @@ I also made a blender render of the current state:
 
 
 *(session duration: roughly 8 hours in total, maybe more)*
+
+~110 for PCB assembly
+
+## Session 5
+
+This is it now! I resolved a few routing issues and added test pads for burning the bootloader since the SAMD21 doesn't come with a USB compatible bootloader by default, and I've also added the 3d model for the case to the repo. The main thing I did in this session was creating a rough BOM which I've listed below:
+
+| Item                                       | Estimated price |
+| ------------------------------------------ | --------------- |
+| PCB Assembly (JLCPCB)                      | $110            |
+| J-Link clone (Aliexpress)                  | $10             |
+| 2x Keystone 1060 coin cell holders (LCSC)  | $9              |
+| 2x LIR2032 coin cells (Aliexpress)         | $5              |
+
+The battery and holder are separate because I'll solder them manually to save on JLCPCB costs (double sided costs significantly more), and with that done the project is pretty much finished!
+
+*(session duration: ~1 hr)*

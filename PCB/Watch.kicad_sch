@@ -6,8 +6,9 @@
 	(paper "A3")
 	(title_block
 		(title "Watch PCB")
-		(date "2025-04-29")
-		(rev "0.9")
+		(date "2025-06-11")
+		(rev "1.0")
+		(company "Daniel Benge")
 	)
 	(lib_symbols
 		(symbol "Battery_Management:MCP73831-2-OT"
@@ -4901,6 +4902,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 148.59) (xy 170.18 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52600020-ac52-40ad-a5b0-775c50fbbc3e")
+	)
+	(wire
+		(pts
 			(xy 86.36 119.38) (xy 100.33 119.38)
 		)
 		(stroke
@@ -5468,16 +5479,6 @@
 			(type default)
 		)
 		(uuid "9dee4b4e-8864-474b-b47e-90288cb8acab")
-	)
-	(wire
-		(pts
-			(xy 165.1 148.59) (xy 170.18 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e12af89-c860-43e6-ac95-2d4e73102179")
 	)
 	(wire
 		(pts
@@ -7587,7 +7588,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 160.02 148.59 0)
+		(at 148.59 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7596,7 +7597,7 @@
 		(fields_autoplaced yes)
 		(uuid "0903fe5b-bf1f-40df-8986-fb57c18b2e0d")
 		(property "Reference" "SW1"
-			(at 160.02 140.97 0)
+			(at 148.59 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7604,7 +7605,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 160.02 143.51 0)
+			(at 148.59 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7612,7 +7613,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 160.02 143.51 0)
+			(at 148.59 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7621,7 +7622,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 160.02 143.51 0)
+			(at 148.59 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7630,7 +7631,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 160.02 148.59 0)
+			(at 148.59 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10061,6 +10062,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 157.48 148.59 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "714a89c4-729b-43df-9339-8223eceaa54f")
+		(property "Reference" "R5"
+			(at 157.48 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 157.48 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 157.48 150.368 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 157.48 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0d771e54-7a92-48be-8e69-08ebe5d2eea2")
+		)
+		(pin "1"
+			(uuid "4fc779a7-7715-4651-a76a-32c8f5172827")
+		)
+		(instances
+			(project ""
+				(path "/e5022d08-9dda-4e3a-b81c-bab3a6fb67af"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D")
 		(at 118.11 195.58 270)
 		(unit 1)
@@ -11891,7 +11960,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.94 148.59 270)
+		(at 143.51 148.59 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11899,7 +11968,7 @@
 		(dnp no)
 		(uuid "da5cc246-570d-465c-b331-eb1c84680334")
 		(property "Reference" "#PWR09"
-			(at 148.59 148.59 0)
+			(at 137.16 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11908,7 +11977,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 151.13 148.5899 90)
+			(at 139.7 148.5899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11917,7 +11986,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 148.59 0)
+			(at 143.51 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11926,7 +11995,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 148.59 0)
+			(at 143.51 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11935,7 +12004,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 148.59 0)
+			(at 143.51 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)

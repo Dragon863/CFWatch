@@ -1,6 +1,4 @@
 # ⌚ CFWatch
-> CFWatch is a project build for Hack Club's [highway](https://highway.hackclub.com/) program! Please read `JOURNAL.md` for the current development log :)
-
 ![render](_images/newrender.png)
 
 
@@ -30,4 +28,4 @@ The repo is structured as follows:
 
 
 > [!CAUTION]
-> The current hardware revision has not been ordered and tested yet! Make sure you check the schematics and layout carefully before ordering it yourself, as I'm very new to designing things like this! There is no software available yet, I will write a barebones application for it once I receive my own.
+> Version 1 has SEVERAL known issues! If you plan to use this to have your own manufactured, please use the V2 design made in EasyEDA and double check everything in the schematic and PCB; I am not responsible for any non-functional boards!

@@ -99,3 +99,21 @@ This is it now! I resolved a few routing issues and added test pads for burning 
 The battery and holder are separate because I'll solder them manually to save on JLCPCB costs (double sided costs significantly more), and with that done the project is pretty much finished!
 
 *(session duration: ~1 hr)*
+
+## Session 6
+
+After a fairly long wait, I received the boards from JLCPCB and tested them. The battery charger worked great, but I found two pretty major errors that prevent the board from functioning as it should. The first is the voltage regulator; instead of being connected to Vin, the SEL pin was shorted to ground, meaning that the regulator defaulted to an output voltage of 1.8V on the main 3.3V power rail. This wouldn't be too much of an issue other than causing a low brightness on the displays; 1.8V is still within the operating range of the SAMD21. Because of this, I moved on to testing flashing a USB bootloader. After several hours of debugging with OpenOCD using various adapters, I came to the conclusion that something was causing the microcontroller to reset every ~0.1 seconds, rendering it impossible to flash any program to the board. This was confusing, so initially I tried shorting the debug pad for the RESET pin to the power rail to prevent it from doing this, but it didn't help. 
+After this I decided to review the schematic to find the issue, and it was fairly obvious...
+
+|    |
+| -- |
+| ![screenshot of schematic](_images/Screenshot%20from%202025-07-01%2019-50-17.png)              |
+| Capacitors C5 and C6 should connect to ground, with VDDIN and VDDANA connected to 3.3V |
+
+This prevented the MCU getting power, so constant brownout errors were occurring. Originally I was going to bridge caps C5 and C6 to direct power in, but these capacitors were almost essential when running on battery because without them the board would randomly reset and lose the time. I concluded that another production run with corrected schematic was necessary.
+
+*(session duration: ~5 hrs)*
+
+## Session 7
+
+I decided to remake the board in EasyEDA Pro pretty much from scratch. The schematic is the same as the previous version for all the working parts, but I also incorporated fixes for the regulator, power rail, reset button and input capacitors as well as adding a ton of test points just in case. The first stage was getting used to EasyEDA - it's much better than the last time I used it, but the keyboard shortcuts are completely different to KiCad's! After some adjusting I managed to get a complete schematic made, with fixed power input and a tweaked layout design. 
